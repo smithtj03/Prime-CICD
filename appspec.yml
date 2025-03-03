@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /  # This refers to the root of the repository
+    destination: /home/ec2-user/prime  # Install files to ec2-user's directory
+hooks:
+  AfterInstall:
+    - location: scripts/start_server.sh  # Ensure this script exists
+      timeout: 300
+      runas: root
