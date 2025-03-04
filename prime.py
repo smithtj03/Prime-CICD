@@ -1,4 +1,4 @@
-import os
+
 
 def is_prime(n):
     if n < 2:
@@ -8,12 +8,7 @@ def is_prime(n):
             return False
     return True
 
-# Write prime numbers to output.txt
-output_file = "/home/ec2-user/prime/output.txt"
-with open("/home/ec2-user/prime/output.txt", "w") as f:
-    for num in range(1, 101):
-        if is_prime(num):
-            f.write(f"{num}\n")
+
 
 def generate_primes(n):
     primes = []
