@@ -6,10 +6,10 @@ def is_prime(n):
             return False
     return True
 
-with open("output.txt", "w") as f:
-    for num in range(1, 101):
-        if is_prime(num):
-            f.write(f"{num}\n")
+with open("/home/ec2-user/prime/output.txt", "w") as f:
+    for i in range(1, 100):  # Example range of numbers to check
+        if is_prime(i):
+            f.write(f"{i} is prime\n")
 
 def generate_primes(n):
     primes = []
