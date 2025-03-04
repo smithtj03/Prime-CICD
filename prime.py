@@ -1,5 +1,3 @@
-
-
 def is_prime(n):
     if n < 2:
         return False
@@ -8,7 +6,10 @@ def is_prime(n):
             return False
     return True
 
-
+with open("output.txt", "w") as f:
+    for num in range(1, 101):
+        if is_prime(num):
+            f.write(f"{num}\n")
 
 def generate_primes(n):
     primes = []
@@ -19,6 +20,6 @@ def generate_primes(n):
         num += 1
     return primes
 
-# Automatically generate and display primes without waiting for user input
-n = 10  # Set a fixed number of primes to generate
-print(f"First {n} prime numbers: {generate_primes(n)}")
+if __name__ == "__main__":
+    n = int(input("Enter the number of primes to generate: "))
+    print(f"First {n} prime numbers: {generate_primes(n)}")
