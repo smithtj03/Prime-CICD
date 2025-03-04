@@ -6,6 +6,11 @@ def is_prime(n):
             return False
     return True
 
+with open("output.txt", "w") as f:
+    for num in range(1, 101):
+        if is_prime(num):
+            f.write(f"{num}\n")
+
 def generate_primes(n):
     primes = []
     num = 2
